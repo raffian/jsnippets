@@ -1,1 +1,1 @@
-# snippets
+# jsnippets
