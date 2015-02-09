@@ -63,6 +63,6 @@ public class LRULeanCache<K,V> {
             
       cache.put("k5", "5");
       System.out.println(cache);
-      //assert cache.toString().equals("{k4=4, k5=5, k2=2}");
+      assert cache.toString().equals("{k4=4, k2=2, k5=5}");
    }
 }
