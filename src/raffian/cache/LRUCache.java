@@ -14,7 +14,7 @@ import javax.annotation.Nonnull;
  * 
  * @author  Raffi Basmajian
  * @date    2/8/2014
- * @version $Id$
+ *
  */
 public class LRUCache<K,V> {
    private final LinkedList<K> recentKeys;

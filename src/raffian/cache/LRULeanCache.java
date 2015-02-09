@@ -13,7 +13,7 @@ import javax.annotation.Nonnull;
  * 
  * @author  Raffi Basmajian
  * @date    2/8/2014
- * @version $Id$
+ * 
  */
 public class LRULeanCache<K,V> {
    private final Map<K,V> cache;   
