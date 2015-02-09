@@ -7,8 +7,8 @@ import java.util.LinkedList;
  * Simple LRU cache implementation; uses LinkedList
  * to track recently used keys, HashMap as backing cache.
  * 
- * This class is not synchronized; for thread-safe
- * version, see ConcurrentLRUCache.
+ * This class is not synchronized; for thread-safe version, 
+ * see ConcurrentLRUCache.
  * 
  * @author Raffi Basmajian
  * @date   2/8/2014
@@ -51,9 +51,17 @@ public class LRUCache<K,V> {
    
    public String toString(){
       return String
-               .format("recentKeys:%s, cache:%s",
+               .format("recentKeys-> %s, cache-> %s",
                   recentKeys.toString(),
                   cache.toString());
+   }
+   
+   public String recentKeysToString(){
+      return recentKeys.toString();
+   }
+   
+   public String cacheToString(){
+      return cache.toString();
    }
    
    public static void main(String[] args) {
@@ -64,7 +72,8 @@ public class LRUCache<K,V> {
       cache.set("k3", "3");
       cache.set("k4", "4");
       
-      System.out.println(cache);
+      System.out.println(cache);      
+      assert cache.recentKeysToString().equals("[k4, k3, k1]");
+      assert cache.cacheToString().equals("{k1=1, k2=2, k3=3, k4=4}");
    }
-
 }
