@@ -12,18 +12,18 @@ import java.util.PriorityQueue;
  * @date    2/9/2014
  */
 public class QueueWithPriorityAndTimeSort {
-   
+   //priorities
    enum TaskPriority {
       High, Medium, Low
    }
 
    /*
-    * The task class, contains a priority 
-    * and timestamp.
+    * The task class, contains a priority and timestamp.
     */
    class Task implements Comparable<Task> {   
       long time;
       TaskPriority priority;
+      
       Task(TaskPriority p, long t) {      
          time = t;
          priority = p;
@@ -35,7 +35,7 @@ public class QueueWithPriorityAndTimeSort {
    }
 
    /*
-    * Comparator compares based on Task.priority and Task.time,
+    * Comparator based on Task.priority and Task.time,
     * giving precedence to older timestamps within a priority group.
     */
    class HighPriorityWithTimeComparator implements Comparator<Task> {
